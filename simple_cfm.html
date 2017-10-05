@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" type="image/ico" href="http://www.datatables.net/favicon.ico">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
+	<title>DataTables example - Server-side processing</title>
+	<link rel="stylesheet" type="text/css" href="DataTables-1.10.16/css/jquery.dataTables.css">
+	<style type="text/css" class="init">
+	
+	</style>
+	<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.12.4.js">
+	</script>
+	<script type="text/javascript" language="javascript" src="DataTables-1.10.16//js/jquery.dataTables.js">
+	</script>
+
+	<script type="text/javascript" language="javascript" class="init">
+	
+$(document).ready(function() {
+	$('#example').DataTable( {
+		"processing": true,
+		"serverSide": true,
+		"ajax": "data/server_processing.cfm"
+	} );
+} );
+
+	</script>
+</head>
+<body class="dt-example">
+	<div class="container">
+		<section>
+			<h1>DataTables example <span>Server-side processing</span></h1>
+			<div class="info">
+				<p>There are many ways to get your data into DataTables, and if you are working with seriously large databases, you might want to consider using the server-side
+				options that DataTables provides. With server-side processing enabled, all paging, searching, ordering etc actions that DataTables performs are handed off to a
+				server where an SQL engine (or similar) can perform these actions on the large data set (after all, that's what the database engine is designed for!). As such,
+				each draw of the table will result in a new Ajax request being made to get the required data.</p>
+				<p>Server-side processing is enabled by setting the <a href="//datatables.net/reference/option/serverSide"><code class="option" title=
+				"DataTables initialisation option">serverSide</code></a> option to <code>true</code> and providing an Ajax data source through the <a href=
+				"//datatables.net/reference/option/ajax"><code class="option" title="DataTables initialisation option">ajax</code></a> option.</p>
+				<p>This example shows a very simple table, matching the other client-side processing examples, but in this instance using server-side processing.</p>
+			</div>
+			<div class="demo-html"></div>
+			<table id="example" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th>First name</th>
+						<th>Last name</th>
+						<th>Position</th>
+						<th>Office</th>
+						<th>Start date</th>
+						<th>Salary</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<th>First name</th>
+						<th>Last name</th>
+						<th>Position</th>
+						<th>Office</th>
+						<th>Start date</th>
+						<th>Salary</th>
+					</tr>
+				</tfoot>
+			</table>
+
+	
+				<div class="epilogue">
+                <p> This example is a server side processing example using Coldfusion for Datatables</p>
+					<p>Please refer to the <a href="http://www.datatables.net">DataTables documentation</a> for full information about its API properties and methods.<br></p>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
