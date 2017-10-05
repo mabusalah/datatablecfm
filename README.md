@@ -6,8 +6,6 @@ Code:			Coldfusion Server Side For Datatables
 
 Environment:	Datatables 1.10.16, Lucee 5.x, Postgres 9.6
 
-License:		GPL v2
-
 Issue Date:		04/10/2017
 
 Notes:
